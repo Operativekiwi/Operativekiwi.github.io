@@ -1,0 +1,8 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^discord\.operative\.kiwi$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.discord\.operative\.kiwi$
+RewriteCond %{REQUEST_URI} !^/[0-9]+\..+\.cpaneldcv$
+RewriteCond %{REQUEST_URI} !^/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+RewriteRule ^/?$ "https\:\/\/discord\.gg\/HqaBeXK" [R=301,L]
+
