@@ -19,10 +19,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-1550045-62');</script>
 	</head>
-	<body class="loading"  onclick="togglePlay()">
-            <audio id="myAudio" preload="true" src="HOME - Resonance.mp3"></audio>
+	<body>
 		<div id="wrapper">
 			<div id="bg"></div>
 			<div id="overlay"></div>
@@ -49,20 +47,15 @@
 
 			</div>
 		</div>
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script>
-			window.onload = function() { document.body.className = ''; }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-<script>  
-
-    var myAudio = document.getElementById("myAudio");
-
-function togglePlay() {
-  return myAudio.paused ? myAudio.play() : myAudio.pause();
-};
-
-</script>
+		<!-- partial:index.partial.html -->
+		<div class="btn-container">
+			<audio controls></audio>
+			<input class="input-file" type="file" id="file" accept="audio/*"/>
+		  </div>
+		  <!-- partial -->
+		  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/92/three.min.js'></script>
+		  <script src='https://codepen.io/broregard/pen/MLZNdN.js'></script>
+		  <script src='https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.2/dat.gui.min.js'></script>
+		  <script  src="./assets/js/script.js"></script>
 	</body>
 </html>

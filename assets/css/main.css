@@ -60,8 +60,12 @@
 	}
 
 	body {
-		background: #fff;
+		/*background: #fff;
+		overflow: hidden;*/
 		overflow: hidden;
+		margin: 0;
+		background: linear-gradient(#07279b,#000,#000);
+		background-size: 8px 8px;
 	}
 
 		body.loading * {
@@ -160,7 +164,7 @@
 		width: 100%;
 	}
 
-/* BG */
+/* BG */ 
 
 	#bg {
 		-moz-animation: bg 60s linear infinite;
@@ -175,15 +179,15 @@
 		-webkit-transform: translate3d(0,0,0);
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
-	/* Set your background with this */
+	 Set your background with this 
 
-		background: #062682 url("images/bg.png") bottom left;
+		/*background: #062682 url("images/bg.png") bottom left;
 		background-repeat: repeat-x;
 		height: 100%;
 		left: 0;
 		opacity: 1;
 		position: fixed;
-		top: 0;
+		top: 0;*/
 	}
 
 	@-moz-keyframes bg {
@@ -253,9 +257,9 @@
 	#bg {
 		background-size: 2250px auto;
 		width: 6750px;
-	}
+	}*/
 
-/* Overlay */
+/* Overlay*/ 
 
 	@-moz-keyframes overlay {
 		0% {
@@ -314,6 +318,11 @@
 		top: 0;
 		width: 100%;
 	}
+	.overlay {
+		position: absolute;
+		top: 0; left: 0;
+		width: 100vw; height: 100vh;
+	  }
 
 /* Main */
 
@@ -334,6 +343,25 @@
 			vertical-align: middle;
 			width: 1px;
 		}
+
+/* Button */
+button {
+	font-family:monospace;
+	background-color: black;
+	border:green;
+	color: magenta;
+	font-size: 20px;
+	z-index: 1;
+	display: inline;
+  }
+  
+  .btn-container {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	width: 100%;
+	background: black;
+  }
 		
 /* Navigation */
 	#navigation {
