@@ -22,14 +22,7 @@ let plane,
 //////////////////////////////////////////////////////
 // Set up dat.gui
 const playlist = {
-  //  "blackbird": "https://res.cloudinary.com/broregard/video/upload/v1550441401/Martyn_Bennett_-_Blackbird_ullkig.mp3",
-  // "golden gal": "https://res.cloudinary.com/broregard/video/upload/v1550441316/goldengal_w1kyry.mp3",
-  // "tonight": "https://res.cloudinary.com/broregard/video/upload/v1550441395/tonight_fgz5zx.mp3",
-  // "wål": "https://res.cloudinary.com/broregard/video/upload/v1550441391/wal_v7pflb.mp3",
-  // "another man": "https://res.cloudinary.com/broregard/video/upload/v1550441401/Another_Man_wl53nr.mp3",
-  // "susie": "https://res.cloudinary.com/broregard/video/upload/v1550441392/susie_hiz4tj.mp3"
-  //"blackbird": "https://res.cloudinary.com/ddqdpeyek/video/upload/v1551488252/Martyn_Bennett_-_Blackbird.mp3"
-  "Resonance": "https://operative.kiwi/HOME%20-%20Resonance.mp3"
+  "Resonance": "assets/music/HOME%20-%20Resonance.mp3"
 };
 
 
