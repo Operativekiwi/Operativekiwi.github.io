@@ -22,7 +22,7 @@ let plane,
 //////////////////////////////////////////////////////
 // Set up dat.gui
 const playlist = {
-  "HOME%20-%20Resonance": "assets/music/HOME%20-%20Resonance.mp3"
+  "HOME%20-%20Resonance": "assets/music/HOME%20-%20Resonance.mp3",
   "憂鬱%20-%20Sun": "assets/music/憂鬱%20-%20Sun.mp3"
 };
 
