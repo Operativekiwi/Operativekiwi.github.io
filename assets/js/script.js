@@ -22,13 +22,14 @@ let plane,
 //////////////////////////////////////////////////////
 // Set up dat.gui
 const playlist = {
-  "Resonance": "assets/music/HOME%20-%20Resonance.mp3"
+  "HOME%20-%20Resonance": "assets/music/HOME%20-%20Resonance.mp3"
+  "憂鬱%20-%20Sun": "assets/music/憂鬱%20-%20Sun.mp3"
 };
 
 
 const VizCtrl = function() {
   this.song = "";
-  this.song = playlist["Resonance"];
+  this.song = playlist["HOME%20-%20Resonance", "憂鬱%20-%20Sun"];
   this.spread = 3;
   this.width = 40;
   this.sphereFrequency = 10;
