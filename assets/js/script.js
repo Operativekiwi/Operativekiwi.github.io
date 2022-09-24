@@ -198,8 +198,8 @@ function fetchSong(mp3 = Viz.song) {
     .then(mp3 => {
     if (!initAudio) {
       initAudio = true;
-      window.addEventListener("click", function allowAudio() {
-        window.removeEventListener("click", allowAudio);
+      window.addEventListener("load", function allowAudio() {
+        window.removeEventListener("load", allowAudio);
         playMusic(mp3);
         render()
       });
