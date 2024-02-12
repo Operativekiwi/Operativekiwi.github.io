@@ -215,8 +215,6 @@ function fetchSong(mp3 = Viz.song) {
     });
 }
 
-}
-
 // Function to extract the filename from the path
 function extractFileName(path) {
   // Split the path by '/' to get an array of parts
