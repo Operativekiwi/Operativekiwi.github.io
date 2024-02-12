@@ -204,15 +204,17 @@ function fetchSong(mp3 = Viz.song) {
           playMusic(mp3);
           render();
           // Update the now playing section with the current song name (extracted filename)
-          document.getElementById("current-song").textContent = "Now playing: " + extractFileName(mp3);
+          document.getElementById("current-song").textContent = "Now playing: " + extractFileName(mp3.url);
         });
       }
       else {
         playMusic(mp3);
         // Update the now playing section with the current song name (extracted filename)
-        document.getElementById("current-song").textContent = "Now playing: " + extractFileName(mp3);
+        document.getElementById("current-song").textContent = "Now playing: " + extractFileName(mp3.url);
       }
     });
+}
+
 }
 
 // Function to extract the filename from the path
