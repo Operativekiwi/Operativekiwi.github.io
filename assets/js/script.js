@@ -202,18 +202,28 @@ function fetchSong(mp3 = Viz.song) {
         window.addEventListener("click", function allowAudio() {
           window.removeEventListener("click", allowAudio);
           playMusic(mp3);
-          render()
-          // Update the now playing section with the current song name
-          document.getElementById("current-song").textContent = "Now playing: " + Viz.song;
+          render();
+          // Update the now playing section with the current song name (extracted filename)
+          document.getElementById("current-song").textContent = "Now playing: " + extractFileName(mp3);
         });
       }
       else {
         playMusic(mp3);
-        // Update the now playing section with the current song name
-        document.getElementById("current-song").textContent = "Now playing: " + Viz.song;
+        // Update the now playing section with the current song name (extracted filename)
+        document.getElementById("current-song").textContent = "Now playing: " + extractFileName(mp3);
       }
     });
 }
+
+// Function to extract the filename from the path
+function extractFileName(path) {
+  // Split the path by '/' to get an array of parts
+  const parts = path.split('/');
+  // Get the last part, which is the filename
+  const filename = parts[parts.length - 1];
+  return filename;
+}
+
 
 
 function playMusic(mp3) {
