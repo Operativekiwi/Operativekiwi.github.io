@@ -192,21 +192,29 @@ function onWindowResize() {
 
 fetchSong(playlist["blackbird"])
 
+// Update the fetchSong function to update the now playing section
 function fetchSong(mp3 = Viz.song) {
   fetch(mp3)
     .then(mp3 => mp3.blob())
     .then(mp3 => {
-    if (!initAudio) {
-      initAudio = true;
-      window.addEventListener("click", function allowAudio() {
-        window.removeEventListener("click", allowAudio);
+      if (!initAudio) {
+        initAudio = true;
+        window.addEventListener("click", function allowAudio() {
+          window.removeEventListener("click", allowAudio);
+          playMusic(mp3);
+          render()
+          // Update the now playing section with the current song name
+          document.getElementById("current-song").textContent = "Now playing: " + Viz.song;
+        });
+      }
+      else {
         playMusic(mp3);
-        render()
-      });
-    }
-    else playMusic(mp3);
-  });
+        // Update the now playing section with the current song name
+        document.getElementById("current-song").textContent = "Now playing: " + Viz.song;
+      }
+    });
 }
+
 
 function playMusic(mp3) {
   const audioContext = window.webkitAudioContext || window.AudioContext;
