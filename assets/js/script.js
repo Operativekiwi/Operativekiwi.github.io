@@ -195,7 +195,11 @@ fetchSong(playlist["blackbird"])
 // Update the fetchSong function to update the now playing section
 function fetchSong(mp3 = Viz.song) {
   fetch(mp3)
-    .then(mp3 => mp3.blob())
+    .then(response => {
+      // Extract the URL from the response object
+      const mp3Url = response.url;
+      return response.blob();
+    })
     .then(mp3 => {
       if (!initAudio) {
         initAudio = true;
@@ -204,16 +208,17 @@ function fetchSong(mp3 = Viz.song) {
           playMusic(mp3);
           render();
           // Update the now playing section with the current song name (extracted filename)
-          document.getElementById("current-song").textContent = "Now playing: " + extractFileName(mp3.url);
+          document.getElementById("current-song").textContent = "Now playing: " + extractFileName(mp3Url);
         });
       }
       else {
         playMusic(mp3);
         // Update the now playing section with the current song name (extracted filename)
-        document.getElementById("current-song").textContent = "Now playing: " + extractFileName(mp3.url);
+        document.getElementById("current-song").textContent = "Now playing: " + extractFileName(mp3Url);
       }
     });
 }
+
 
 // Function to extract the filename from the path
 function extractFileName(path) {
